@@ -1,0 +1,576 @@
+@charset "utf-8";
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+button{
+  border: 0;
+  background: none;
+}
+
+section{
+  padding: 2rem 0;
+}
+
+.center-item{
+  display: flex;
+  justify-content: center;
+}
+
+/* 文字サイズ設定 */
+ p{
+   font-size: 0.8rem;
+ }
+/* タイトル */
+.title-set{
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.title-en{
+   font-size: 1rem;
+}
+
+.title-jp{
+  font-size: 1.8rem;
+
+}
+
+/* キャンペーンバナー */
+.campaign-bannar{
+  background-color: #0A4479;
+  padding: 1rem 0;
+}
+
+.campaign-bannar h2{
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+}
+.discount-set{
+  justify-content: center;
+  margin: 0;
+}
+
+.off{
+  display: flex;
+  justify-content: flex-end;
+  color: #F7EC02;
+  padding-right: 1rem;
+}
+.off p{
+  font-size: 1.5rem;
+}
+.contact-area{
+  display: flex;
+  justify-content: flex-start;
+  display: inline;
+}
+
+/* .campaign-bannar p{
+  color: #F7EC02;
+  font-size: 2.3rem;
+  padding-right: 1rem;
+} */
+
+.contact-btn{
+  color: #fff;
+  background-color: #F97E1C;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+.contact-btn:hover{
+  background-color: #fa7202;
+}
+.contact-btn:active{
+  border: none;
+  text-decoration: none;
+}
+@media screen and (max-width: 768px){
+  .campaign-bannar h2{
+    font-size: 1.5rem;
+  }
+  .off{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    font-size: 1.2rem;
+    padding-right: 1rem;
+  }
+  .contact-btn{
+    font-size: 1rem;
+  }
+  .contact-area{
+    display: flex;
+    justify-content: center;
+  }
+  .discount-set{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+ 
+}
+
+/* ナビ設定 */
+header nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logoarea h1{
+  color: #0A4479;
+  font-size: 1.5rem;
+  font-weight: 700;
+  
+}
+.menu{
+  display: flex;
+  justify-content: flex-end;
+}
+.menu li{
+  padding: 0.5rem 1rem;
+}
+.btn-hum{
+  position: relative;
+  display: none;
+  z-index: 3;
+}
+.menu-sm{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #C9E3F8;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  opacity: 0;
+  transform: translateX(-500px);
+  transition: opcity 0.5s,transform 0.5s;
+}
+.openmenu{
+  position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	text-align: center;
+}
+.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+@media screen and (max-width: 786px){
+  .menu-area{
+    display: none;
+  }
+  .menu{
+    flex-direction: column;
+		justify-content: center;
+  }
+  .menu li{
+    font-size: 1.8rem;
+    padding: 1rem 0;
+  }
+  .btn-hum{
+    display: block;
+  }
+}
+/* スタート */
+header .head-sm{
+  display: none;
+}
+#about{
+  background: url(../images/about-back.jpg) no-repeat center;
+}
+
+#about h2{
+  text-align: center;
+  color: #0F5184;
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+
+#about br{
+  display: none;
+}
+#about p{
+  /* padding:1rem 15rem 15rem 2rem; */
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+#worry{
+  padding: 2rem 0;
+
+}
+.worry-list{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.worry-list li{
+  font-size: 1.2rem;
+  padding-top: 1.2rem;
+  line-height: 1.2rem;
+  display: flex;
+}
+.worry-list i img{
+  width: 35px;
+  padding-right: 0.8rem;
+}
+#worry h2{
+  color: #0A4479;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding-top: 1.5rem;
+}
+.trouble-img{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.target-boxes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.target-box{
+  flex-basis: 25%;
+  padding: 0 0.5rem 1rem 0.5rem;
+}
+.br-sm{
+  display: none;
+}
+@media screen and (max-width:576px){
+  .br-sm{
+    display: block;
+  }
+}
+
+/* コース紹介 */
+.coursetitle-area{
+  background-color: #0266B5;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+  .back-area{
+    background: url(../images/course-back.jpg) no-repeat center;
+    margin: 0;
+    padding: 1rem;
+  }
+
+.course-box{
+  border: 3px solid #0266B5;
+  background-color: #fff;
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.course-text i{
+  padding: 0 0.5rem 0.3rem 0;
+}
+.course-box h2{
+  border-bottom: 2px solid #F27C03;
+  padding-bottom: 0.2rem;
+}
+
+.course-text h2{
+   padding: 0.5rem 0 0 0.5rem;
+}
+
+.course-img{
+  padding: 1rem ;
+  text-align: center;
+}
+.sp-cam{
+  margin-top: -2rem;
+}
+@media screen and (max-width:576px){
+  .course-text h2{
+    font-size:  1.8rem;
+  }
+  .course-text img{
+    width: 8%;
+  }
+  .course-box{
+    width: auto;
+  }
+  .course-box h2{
+    text-align: center;
+  }
+}
+
+/* 講師紹介 */
+.instructer-img{
+  text-align: center;
+}
+.instructer-img img{
+  width: 70%;
+  padding-bottom: 1rem;
+
+}
+
+#instructer .name{
+  border-bottom: 2px solid #084D84;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.author-text{
+  display: flex;
+  align-items: center;
+  height: 500px;
+  padding: 3rem;
+}
+.author-imgbottom{
+  justify-content: space-between;
+}
+.author-imgbottom .col-6{
+  padding:0;
+}
+@media screen and (max-width:576px){
+  .name{
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+#review{
+  background-color: #E7F0FA;
+}
+
+.review-img{
+  display: flex;
+  justify-content: flex-start;
+}
+
+#price h2{
+  padding: 2rem 0;
+}
+
+.price-copy{
+  font-size: 1.5rem;
+  text-align: center;
+}
+.price-copy h2{
+  font-size: 1.5rem;
+}
+
+.price-copy p{
+    font-size: 0.5rem;
+}
+
+.table-contents p{
+  font-size: 0.8rem;
+}
+.price-box{
+  height: 240px;
+}
+.price-box img{
+  height: 100%;
+  padding: 0 1rem 1rem 0;
+}
+@media screen and (max-width: 992px){
+  .price-box img{
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+  }
+  .price-box:first-child img{
+    width: 80%;
+    height: auto;
+  }
+  .price-box{
+    text-align: center;
+    height: auto;
+  }
+}
+
+
+.table-contents{
+  justify-content: center;
+}
+#benefit{
+  background-color: #E2F4F7;
+}
+
+.benefit-boxes{
+  display: flex;
+  justify-content: center;
+}
+
+#benefit p{
+   padding-top: 1rem;
+}
+
+#qa {
+  width: 70%;
+  margin: 0 auto;
+
+}
+.qa-list li{
+   padding: 0.5rem;
+   display: flex;
+}
+.qa-list li img{
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.question{
+  border-bottom: 3px solid #0A4479;
+  font-size: 1.3rem;
+}
+.qa-list li.answer {
+  padding-bottom: 3rem;
+}
+@media screen and (max-width:768px){
+  #qa{
+    width: auto;
+  }
+}
+
+#contact img{
+  height: 60px;
+  text-align: center;
+  margin: 1rem auto;
+  display: inline;
+}
+.phone{
+  background-color: #0266B5;
+  text-align: center;
+  height: 250px;
+}
+
+
+.phone-number{
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.time{
+  border-radius: 50px;
+  background-color:  #C9E3F8;
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+}
+.mail{
+  background-color: #C9E3F8;
+  text-align: center;
+  height: 250px;
+}
+.mail i{
+  display: block;
+  padding-bottom: 2.5rem;
+}
+
+#message{
+  background: url(../images/message-back.jpg) no-repeat center;
+}
+
+#message h2{
+  text-align: center;
+  color: #0F5184;
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+
+#message br{
+  display: none;
+}
+#message p{
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+
+@media screen and (max-width: 768px){
+  header .head-sm{
+    display: block;
+  }
+  header .head-pc{
+    display: none;
+  }
+
+  .campaign-bannar h2{
+    font-size: 1.5rem;
+  }
+  .off{
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding-right: 1rem;
+  }
+  .contact-btn{
+    font-size: 1rem;
+  }
+  #about h2{
+    font-size: 1.5rem;
+  }
+  #about br{
+    display: block;
+  }
+  .worry-list li{
+    font-size: 1rem;
+    padding-top: 1.2rem;
+    line-height: 1.2rem;
+    display: flex;
+  }
+  .course-text {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .contact-area{
+    display: flex;
+    justify-content: center;
+  }
+
+  .target-boxes{
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .target-box{
+    flex-basis: 25%;
+    padding-bottom: 1rem;
+  }
+  .course-img img{
+    width: 65%;
+  }
+  .benefit-box{
+    width: 90%;
+    padding-bottom: 1rem;
+  }
+  .student{
+    text-align: center;
+  }
+
+  .student img{
+    width: 60%;
+  }
+  #message h2{
+    font-size: 1.6rem;
+  }
+
+  #message p{
+    font-size: 0.8rem;
+  }
+  #message br{
+    display: block;
+  }
+}
+@media screen and (max-width:576px){
+  .target-box{
+    flex-basis: 50%;
+    padding-bottom: 1rem;
+  }
+}
