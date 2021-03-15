@@ -72,6 +72,7 @@ nav{
   align-items: center;
   padding: 1rem;
   max-width: 1140px;
+  background-color: rgba(255, 255, 255, 0.897);
 }
 .logo-area h2{
    font-size: 1.5rem;
@@ -108,6 +109,94 @@ a:hover{
    font-size: 1rem;
    line-height: 1.8rem;
 }
+
+/* ハンバーガーライン */
+.btn-hum{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  z-index: 100;
+  padding-top: 1.3rem;
+}
+.hum-line span,
+.hum-line span::before,
+.hum-line span::after{
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.3s;
+  position: absolute;
+}
+.hum-line span::before{
+  bottom: 8px;
+}
+.hum-line span::after{
+  top: 8px;
+}
+
+.hum-active span{
+  background: rgba(255, 255, 255, 0);
+}
+
+.hum-active span::before{
+  bottom: 0;
+  transform: rotate(45deg);
+}
+.hum-active span::after{
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* メニュー */
+.nav-area{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-hum{
+  display: none;
+  position: relative;
+  z-index: 200;
+
+}
+.menu-sm{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #defcfcdc;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  opacity: 0;
+  transform: translateX(-500px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.open-menu{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  color: #333;
+  text-align: center;
+}
+
+.active-menu{
+  transform: translateX(0);
+  opacity: 1;
+}
+.logo-sm h2{
+   
+}
+
+
 @media screen and (max-width:768px){
   /* .logo-area h2{
     font-size: 1.2rem;
@@ -118,6 +207,16 @@ a:hover{
   } */
 }
 @media screen and (max-width:576px){
+  .menu-area{
+    display: none;
+  }
+  .btn-hum{
+    display: block;
+  }
+  .open-menu li{
+    padding-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+  }
   .logo-area h2{
     font-size: 1rem;
     padding-left: 0.3rem;

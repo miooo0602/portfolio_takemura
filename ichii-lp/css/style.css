@@ -17,7 +17,9 @@ section{
   display: flex;
   justify-content: center;
 }
-
+a{
+  color: #333;
+}
 /* 文字サイズ設定 */
  p{
    font-size: 0.8rem;
